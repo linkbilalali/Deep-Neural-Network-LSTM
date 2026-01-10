@@ -1,0 +1,86 @@
+EnhancedPredictor(
+  (vis_enc): VisionBackbone(
+    (encoder): Sequential(
+      (0): Conv2d(3, 16, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3))
+      (1): GroupNorm(8, 16, eps=1e-05, affine=True)
+      (2): LeakyReLU(negative_slope=0.1)
+      (3): Conv2d(16, 32, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+      (4): GroupNorm(8, 32, eps=1e-05, affine=True)
+      (5): LeakyReLU(negative_slope=0.1)
+      (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): GroupNorm(8, 64, eps=1e-05, affine=True)
+      (8): LeakyReLU(negative_slope=0.1)
+    )
+    (enc_fc): Linear(in_features=8192, out_features=64, bias=True)
+    (dec_fc): Linear(in_features=64, out_features=8192, bias=True)
+    (decoder): Sequential(
+      (0): ConvTranspose2d(64, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
+      (1): GroupNorm(8, 32, eps=1e-05, affine=True)
+      (2): LeakyReLU(negative_slope=0.1)
+      (3): ConvTranspose2d(32, 16, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+      (4): GroupNorm(8, 16, eps=1e-05, affine=True)
+      (5): LeakyReLU(negative_slope=0.1)
+      (6): ConvTranspose2d(16, 3, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), output_padding=(1, 1))
+      (7): Sigmoid()
+    )
+  )
+  (text_enc): TextEncoder(
+    (embed): Embedding(30522, 64)
+    (lstm): LSTM(64, 64, num_layers=2, batch_first=True, dropout=0.1)
+  )
+  (tag_emb): TagEmbedder(
+    (net): Sequential(
+      (0): Linear(in_features=84, out_features=32, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.1, inplace=False)
+      (3): Linear(in_features=32, out_features=16, bias=True)
+    )
+  )
+  (lstm): LSTM(144, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (attn): Attention(
+    (attn): Linear(in_features=64, out_features=1, bias=True)
+  )
+  (img_head): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (ctx_head): Sequential(
+    (0): Linear(in_features=128, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.2, inplace=False)
+  )
+  (vis_dec): VisionBackbone(
+    (encoder): Sequential(
+      (0): Conv2d(3, 16, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3))
+      (1): GroupNorm(8, 16, eps=1e-05, affine=True)
+      (2): LeakyReLU(negative_slope=0.1)
+      (3): Conv2d(16, 32, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2))
+      (4): GroupNorm(8, 32, eps=1e-05, affine=True)
+      (5): LeakyReLU(negative_slope=0.1)
+      (6): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (7): GroupNorm(8, 64, eps=1e-05, affine=True)
+      (8): LeakyReLU(negative_slope=0.1)
+    )
+    (enc_fc): Linear(in_features=8192, out_features=64, bias=True)
+    (dec_fc): Linear(in_features=64, out_features=8192, bias=True)
+    (decoder): Sequential(
+      (0): ConvTranspose2d(64, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
+      (1): GroupNorm(8, 32, eps=1e-05, affine=True)
+      (2): LeakyReLU(negative_slope=0.1)
+      (3): ConvTranspose2d(32, 16, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), output_padding=(1, 1))
+      (4): GroupNorm(8, 16, eps=1e-05, affine=True)
+      (5): LeakyReLU(negative_slope=0.1)
+      (6): ConvTranspose2d(16, 3, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), output_padding=(1, 1))
+      (7): Sigmoid()
+    )
+  )
+  (text_dec): TextDecoder(
+    (embed): Embedding(30522, 64)
+    (lstm): LSTM(64, 64, num_layers=2, batch_first=True, dropout=0.1)
+    (fc): Linear(in_features=64, out_features=30522, bias=True)
+  )
+)
+
+Total Parameters: 7,251,118
+Trainable Parameters: 7,251,118

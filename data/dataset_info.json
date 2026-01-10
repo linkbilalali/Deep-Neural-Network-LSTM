@@ -1,0 +1,8 @@
+{
+  "train_samples": 3552,
+  "test_samples": 626,
+  "total": 4178,
+  "loaded_at": "2026-02-13T22:28:19.976619",
+  "source": "daniel3303/StoryReasoning",
+  "task": "Given 4 frames, predict 5th frame description"
+}

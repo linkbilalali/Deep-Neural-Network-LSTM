@@ -1,0 +1,23 @@
+GENERATED STORY DESCRIPTIONS
+================================================================================
+
+Story 1:
+--------------------------------------------------------------------------------
+Ground Truth: the room was filled with a sense of warmth and joy asthe child, sam, stood beforethe cake. the candles flickered in the soft light, their flames casting a gentle glow on his face. sam took a deep breath, his eyes filled with determination. he raised his hands and blew out the candles,
+Generated:    the room was filled with a sense of warmth and joy asthe child, sam, stood beforethe cake. the candles flickered in the soft light, their flames casting a gentle glow on his face. sam took a deep breath, his eyes filled with determination. he raised his hands and crew out the candles,
+
+Story 2:
+--------------------------------------------------------------------------------
+Ground Truth: thebedroomwas a place of solitude forthe man, a place wherehecouldescape from the world. helay inthe bed, the cup of coffeeandglass of wateron the tray besidehim. theforkinhishand was a symbol ofhisattempts to find comfort in the
+Generated:    thebedroomwas a place of solitude forthe man, a place wherehecouldescape from the world. helay inthe bed, the cup of coffeeandglass of wateron the tray besidehim. theforkinhishand was a symbol ofhisattem dangers to find comfort in the
+
+Story 3:
+--------------------------------------------------------------------------------
+Ground Truth: in a dimly lit prison cell, a person with a distressed expressionshouted, the sound echoing off thewindow with bars. thea dimly lit prison cellseemed to swallow the sound, amplifying the sense of isolation. thelow lighting with shadowscast an eerie glow, adding to the tension.
+Generated:    in a dimly lit prison cell, a person with a distressed expressionshouted, the sound echoing off thewindow with bars. thea dimly lit prisonndingeemed to swallow the sound, amplifying the sense of isolation. thelow lighting with shadowscast an eerie glow, adding to the tension.
+
+Story 4:
+--------------------------------------------------------------------------------
+Ground Truth: the scene shifted asthe person in the suitstood alone in the dining area. theylooked at thepizzaon the table, remembering the earlier conversation. theyknew the stakes were high, andtheyhad to be prepared for the challenges ahead. theindoor dining areaseemed to
+Generated:    the scene shifted asthe person in the suitstood alone in the dining area. theylooked at thepizzaon the table, doctor the earlier conversation. theyknew the stakes were high, andtheyhad to be prepared for the challenges ahead. theindoor dining areaseemed to
+

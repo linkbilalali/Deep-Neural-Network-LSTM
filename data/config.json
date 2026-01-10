@@ -1,0 +1,16 @@
+{
+  "epochs": 25,
+  "batch_size": 8,
+  "learning_rate": 0.001,
+  "emb_dim": 64,
+  "latent_dim": 64,
+  "lstm_hidden": 64,
+  "tag_embed_dim": 16,
+  "n_layers": 2,
+  "dropout": 0.1,
+  "device": "cuda",
+  "optimizer": "Adam",
+  "scheduler": "ReduceLROnPlateau",
+  "data_split": "video_level_holdout",
+  "train_val_split": "80/20"
+}
